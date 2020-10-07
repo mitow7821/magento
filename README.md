@@ -1,4 +1,7 @@
 # magento
+
+# Desktop
 ![Alt text](screens/desktop.png?raw=true "Desktop")
-![Alt text](screens/tablet.png?raw=true "Tablet")
+
+# Mobile
 ![Alt text](screens/mobile.png?raw=true "Mobile")

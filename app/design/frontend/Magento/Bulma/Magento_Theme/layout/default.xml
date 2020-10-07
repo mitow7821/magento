@@ -1,0 +1,40 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+                <argument name="logo_width" xsi:type="number">150</argument>
+            </arguments>
+        </referenceBlock>
+
+        <!-- CMS -->
+        <referenceBlock name="cms_page" remove="true"/>
+
+        <referenceBlock name="skip_to_content" remove="true"/>
+
+        <referenceContainer name="header.panel">
+            <block class="Magento\Framework\View\Element\Template" name="free_delivery" template="Magento_Theme::custom.phtml" before="top.links"/>
+        </referenceContainer>
+
+        <referenceContainer name="footer">
+            <referenceBlock name="store_switcher" remove="true"/>
+            <referenceBlock name="report.bugs" remove="true"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer_logo" template="Magento_Theme::footer-logo.phtml" before="-"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer_contact" template="Magento_Theme::footer-contact.phtml" after="footer_links"/>
+            <block class="Magento\Framework\View\Element\Template" name="footer_copyrig" template="Magento_Theme::footer-copyrig.phtml" after="-"/>
+        </referenceContainer>
+
+        <referenceBlock name="copyright" remove="true"/>
+
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Text" name="footer_links_title" before="-">
+                <arguments>
+                    <argument name="text" xsi:type="string">
+                        <![CDATA[<h3 class="links-title">Informacje</h3>]]>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>
+
